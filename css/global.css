@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+    
+body {
+    background: #f4f4f4;
+}
+
+.header {
+    display: inline-block;
+    background: white;
+    width: 100%;
+}
+
+.headerLeft {
+}
+
+.headerRight {
+    text-align: right;
+    background: white;
+    padding-top: 25px;
+}
+
+.headerRightContent {
+    font-size: 20px;
+}
+
+.signIn {
+    border: solid;
+    border-color: lightblue;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+li {
+    /*display: inline;*/
+}
+
+.logoImage {
+    width: 10%;
+}
+
+.navbar {
+    padding-left: 10px;
+    /*background: white;*/
+    background-color: white;
+}
+
+.navbar-brand {
+    /*margin-right: 20px;*/
+    background: white;
+    background-color: white;
+}
+
+.leftColumn {
+    padding: 20px;
+}
+
+.rightColumn {
+    padding: 20px;
+}
+
+.blurb {
+    background-color: white; 
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;  
+    border-color: lightgray;
+    /*box-shadow: 0 0 0 4px black;*/
+    color: black;
+    font-size: 24px;    
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding: 10px;
+    width: 100%;
+}
+
+.categoryLinks {
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+input[type='radio'] {
+     transform: scale(2);
+     vertical-align: baseline;      
+     }
+
+.playIcon {
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: lightgray;
+    padding: 3px;
+}
+
+.checkboxText {
+    font-size: 17px;
+}
+
+.allCategories {
+    font-size: 20px;
+}
+
+.sortBy {
+    text-align: right;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    max-width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    margin:5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
+    background: #ffffff;
+    display: inline-block;
+}
+
+.seller {
+    text-align: left;
+}
+
+.price {
+    text-align: right;    
+}
