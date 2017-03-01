@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+
+img {
+    width: 100%;
+}
     
 body {
     background: #f4f4f4;
@@ -18,7 +22,7 @@ body {
 .headerRight {
     text-align: right;
     background: white;
-    padding-top: 25px;
+    /*padding-top: 25px;*/
 }
 
 .headerRightContent {
@@ -37,7 +41,11 @@ li {
 }
 
 .logoImage {
-    width: 10%;
+    width: 100%;
+}
+
+.searchBar {
+    padding-top: 15px;
 }
 
 .navbar {
@@ -50,6 +58,7 @@ li {
     /*margin-right: 20px;*/
     background: white;
     background-color: white;
+    margin-right: 15px;
 }
 
 .leftColumn {
@@ -109,7 +118,7 @@ input[type='radio'] {
 }
 
 .card {
-    max-width: 100%;
+    width: 25%;
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 20px;
