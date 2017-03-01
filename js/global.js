@@ -9,26 +9,33 @@ getItems();
 //     price: items[0]
 // });
 
+document.querySelector('#searchButton').addEventListener('click', getItems);
 
-function getItems() {
-    fetch('https://thinksaydo.com/tiyproxy.php?https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent('board games') + '&includes=Images,Shop')
+function getItems(e) {
+    var searchValue = document.querySelector('#searchField').value;
+    var searchTermValue = document.querySelector('#searchTerm');
+
+    fetch('https://thinksaydo.com/tiyproxy.php?https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent(searchValue) + '&includes=Images,Shop')
         .then(response => response.json())
         .then(data => {
             items = data.results;
-        })
 
-        .then(whatever => console.log(items[0]))
-        .then(whatever => renderUserCards());
+            renderCards();
+            searchTermValue.innerHTML = searchValue;
+        })
 
 }
 
-function renderUserCards() {
+function renderCards() {
+    document.querySelector('#app').innerHTML = '';
+
     items.forEach(function(user) {
 
         createCard(user);
 
     })
 }
+
 
 function createCard(items) {
     var card = `<div class="card">
@@ -37,9 +44,6 @@ function createCard(items) {
             <h5 class="col-sm-6 card-caption seller">${items.Shop.shop_name}</h5>
             <h5 class="col-sm-6 card-caption price">${items.price}</h5>
         </div>`;
-
-
-
 
     document.querySelector('#app').innerHTML += card;
 }
