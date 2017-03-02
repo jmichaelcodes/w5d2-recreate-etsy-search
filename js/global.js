@@ -10,10 +10,19 @@ getItems();
 // });
 
 document.querySelector('#searchButton').addEventListener('click', getItems);
+document.querySelector('#searchField').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        getItems();
+    }
+})
 
 function getItems(e) {
     var searchValue = document.querySelector('#searchField').value;
     var searchTermValue = document.querySelector('#searchTerm');
+
+    if (searchValue === '') {
+        searchValue = 'etsy';
+    }
 
     fetch('https://thinksaydo.com/tiyproxy.php?https://openapi.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=' + encodeURIComponent(searchValue) + '&includes=Images,Shop')
         .then(response => response.json())
