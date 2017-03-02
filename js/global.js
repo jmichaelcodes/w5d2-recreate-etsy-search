@@ -2,13 +2,6 @@ var items = [];
 
 getItems();
 
-// createCard({
-//     src: items[0],
-//     title: items[0],
-//     seller: items[0],
-//     price: items[0]
-// });
-
 document.querySelector('#searchButton').addEventListener('click', getItems);
 document.querySelector('#searchField').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
